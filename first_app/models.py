@@ -1,0 +1,33 @@
+from django.db import models
+from django.core import validators
+class StudentModel(models.Model):
+#    auto_field=models.AutoField(primary_key=True)
+   big_auto_field = models.BigAutoField(primary_key=True)
+   name=models.CharField(max_length=20)
+   email=models.EmailField(max_length=4)
+   binary_data=models.BinaryField(max_length=30)
+   enter_date=models.DateField()
+   agree = models.BooleanField()
+   comma_separated_field = models.CharField(
+        max_length=255
+    )
+   date_time_field = models.DateTimeField()
+   decimal_field = models.DecimalField(max_digits=5, decimal_places=2)
+   duration_field = models.DurationField()
+   file_field = models.FileField(upload_to='files/')
+#    file_path_field = models.FilePathField(path='/model_form/')
+   float_field = models.FloatField()
+   # foreign_key = models.ForeignKey(OtherModel, on_delete=models.CASCADE)
+   generic_ip_address_field = models.GenericIPAddressField()
+   integer_field = models.IntegerField()
+   json_field = models.JSONField()
+   # many_to_many_field = models.ManyToManyField(OtherModel)
+   # null_boolean_field = models.NullBooleanField()
+   # one_to_one_field = models.OneToOneField(OtherModel, on_delete=models.CASCADE)
+   positive_big_integer_field = models.PositiveBigIntegerField()
+   positive_integer_field = models.PositiveIntegerField()
+   positive_small_integer_field = models.PositiveSmallIntegerField()
+   slug_field = models.SlugField()
+   small_integer_field = models.SmallIntegerField()
+   time_field = models.TimeField()
+   url_field = models.URLField()
